@@ -1,0 +1,3 @@
+[test]
+# macOS: keep every test owner's ledgers and daemon in a scratch directory (see the file).
+preload = ["./test/preload.ts"]

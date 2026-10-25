@@ -1,0 +1,19 @@
+node_modules/
+*.log
+
+# [APMM Managed] - DO NOT EDIT below
+# Microsoft's Agent Package Manager (apm) is a compositional system for
+# management of instruction files, skills, hooks, and more.
+#
+# In this project, all Claude Code and Codex files/folders are managed by apm
+# and should never be edited manually.
+.claude/
+.codex/
+.agents/
+CLAUDE.md
+AGENTS.md
+.mcp.json
+apm_modules/
+apm.lock.yaml
+.apmm/packages/
+# [APMM Managed] - DO NOT EDIT above

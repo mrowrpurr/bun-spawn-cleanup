@@ -1,0 +1,39 @@
+{
+  "name": "bun-spawn-cleanup",
+  "version": "0.1.0",
+  "description": "Bun.spawn drop-in that reaps spawned processes and all their descendants when the owning process exits or is killed. Kernel-guaranteed on Windows (Job Objects) and Linux (cgroup v2), best-effort Linux fallback; best-effort macOS backend (kernel lineage ids + env marker + ledger, with an auto-started kqueue daemon for SIGKILL).",
+  "type": "module",
+  "license": "MIT OR 0BSD",
+  "author": "Mrowr Purr <mrowr.purr@gmail.com>",
+  "module": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./core": "./src/core.ts",
+    "./internal": "./src/internal.ts"
+  },
+  "bin": {
+    "bun-spawn-cleanup": "./bin/cli.ts"
+  },
+  "files": [
+    "src",
+    "bin",
+    "docs",
+    "README.md",
+    "LICENSE",
+    "LICENSE-0BSD"
+  ],
+  "scripts": {
+    "test": "bun test",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "bun run typecheck"
+  },
+  "keywords": ["bun", "spawn", "subprocess", "cleanup", "job-object", "cgroup", "kqueue", "macos", "process-tree", "reap", "orphan"],
+  "engines": {
+    "bun": ">=1.3.0"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.2",
+    "typescript": "^7.0.2"
+  }
+}
